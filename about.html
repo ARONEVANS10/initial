@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Jazul Empire Distributors, Inc.</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/back.ico">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<style>
+:root {
+    --jazul-yellow: #FFC107;
+    --jazul-maroon: #800000;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--jazul-maroon);
+    padding: 15px 20px;
+}
+.navbar .nav-link {
+    color: var(--jazul-yellow);
+    font-weight: 600;
+    margin-left: 15px;
+}
+.navbar .nav-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.jazul-brand-text {
+    color: var(--jazul-yellow);
+    font-weight: 800;
+    font-size: clamp(24px, 3vw, 36px);
+    letter-spacing: 1px;
+}
+
+/* Hero */
+.jazul-hero {
+    background: linear-gradient(rgba(128,0,0,0.85), rgba(128,0,0,0.85)), url('assets/back.png') no-repeat center center;
+    background-size: cover;
+    color: var(--jazul-yellow);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 6px solid var(--jazul-yellow);
+}
+.jazul-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+}
+.jazul-hero p.lead {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-top: 15px;
+}
+.btn-jazul {
+    background-color: var(--jazul-yellow);
+    color: var(--jazul-maroon);
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 10px 22px;
+}
+.btn-jazul:hover {
+    background-color: var(--jazul-maroon);
+    color: var(--jazul-yellow);
+    transform: scale(1.05);
+}
+
+/* Mission & Vision Icons */
+.fs-1-custom {
+    font-size: 3rem;
+    color: var(--jazul-maroon);
+}
+
+/* President Section */
+#president-message {
+    background-color: var(--jazul-maroon);
+    color: var(--jazul-yellow);
+}
+#president-message h2 {
+    font-weight: 700;
+}
+#president-message p {
+    font-size: 1.1rem;
+}
+
+/* Board of Directors */
+.director-card img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.director-card h5 {
+    color: var(--jazul-maroon);
+    font-weight: 700;
+}
+.director-card p {
+    color: #555;
+}
+
+/* Core Values */
+.fs-1-core {
+    font-size: 3rem;
+    color: var(--jazul-maroon);
+}
+
+/* Footer */
+footer {
+    background-color: var(--jazul-maroon);
+    color: var(--jazul-yellow);
+    text-align: center;
+    padding: 20px 10px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Jazul Empire</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon" style="filter: invert(100%);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="about.html"><i class="bi bi-info-circle-fill me-1"></i> About Us</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="product.html"><i class="bi bi-box-seam me-1"></i> Products</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#service-area"><i class="bi bi-geo-alt-fill me-1"></i> Service Areas</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#team"><i class="bi bi-people-fill me-1"></i> Team</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="faq.html"><i class="bi bi-question-circle-fill me-1"></i> FAQ</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="contact.html"><i class="bi bi-envelope-fill me-1"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Hero -->
+<header class="jazul-hero">
+    <div class="container">
+        <h1>Jazul Empire Distributors, Inc.</h1>
+        <p class="lead">Your trusted partner in LPG and Fuel distribution solutions.</p>
+        <a href="#about" class="btn btn-jazul mt-3">Learn More About Us</a>
+    </div>
+</header>
+
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-5 bg-light">
+<div class="container">
+
+<h2 class="text-center section-title mb-5">Our Business Units</h2>
+
+<div class="row text-center g-4">
+
+<!-- Fuel -->
+<div class="col-md-4">
+<div class="card service-card shadow p-4 h-100">
+<img src="assets/fuel logo.png" class="service-logo mb-3" alt="Fuel Logo">
+
+<h5 class="fw-bold">Fuel Distribution</h5>
+<p>
+Supply of Diesel, Premium and petroleum products for stations and businesses.
+</p>
+</div>
+</div>
+
+<!-- LPG -->
+<div class="col-md-4">
+<div class="card service-card shadow p-4 h-100">
+<img src="assets/lpglogo.png" class="service-logo mb-3" alt="LPG Logo">
+
+<h5 class="fw-bold">LPG Supply</h5>
+<p>
+Safe and reliable LPG distribution including 11kg and 50kg cylinders.
+</p>
+</div>
+</div>
+
+<!-- Aggregates -->
+<div class="col-md-4">
+<div class="card service-card shadow p-4 h-100">
+<img src="assets/agrrelogo.png" class="service-logo mb-3" alt="Aggregates Logo">
+
+<h5 class="fw-bold">Jazul Aggregates</h5>
+<p>
+Quality sand, gravel and construction materials for infrastructure projects.
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= PERMITS SECTION ================= -->
+<section id="permits" class="py-5 bg-light">
+<div class="container">
+
+<h2 class="text-center fw-bold mb-5">Permits & Certifications</h2>
+<p class="text-center text-muted mb-5">
+Jazul Empire Distributors, Inc. operates in full compliance with national and local government regulations.
+Below are our official permits and certifications.
+</p>
+
+<div class="row g-4">
+
+<!-- SEC Registration -->
+<div class="col-md-3 col-sm-6">
+<div class="card permit-card shadow-sm">
+<img src="assets/secreg.jpg" class="permit-img" alt="SEC Registration">
+<div class="card-body text-center">
+<h6 class="fw-bold">SEC Registration</h6>
+<p class="small text-muted">Securities and Exchange Commission</p>
+</div>
+</div>
+</div>
+
+<!-- Mayor's Permit -->
+<div class="col-md-3 col-sm-6">
+<div class="card permit-card shadow-sm">
+<img src="assets/permits/mayors-permit.jpg" class="permit-img" alt="Mayor's Permit">
+<div class="card-body text-center">
+<h6 class="fw-bold">Mayor's Permit</h6>
+<p class="small text-muted">Local Government Authorization</p>
+</div>
+</div>
+</div>
+
+<!-- BIR -->
+<div class="col-md-3 col-sm-6">
+<div class="card permit-card shadow-sm">
+<img src="assets/permits/bir.jpg" class="permit-img" alt="BIR Registration">
+<div class="card-body text-center">
+<h6 class="fw-bold">BIR Registration</h6>
+<p class="small text-muted">Tax Identification & Compliance</p>
+</div>
+</div>
+</div>
+
+<!-- Fire Safety -->
+<div class="col-md-3 col-sm-6">
+<div class="card permit-card shadow-sm">
+<img src="assets/permits/fire.jpg" class="permit-img" alt="Fire Safety Inspection">
+<div class="card-body text-center">
+<h6 class="fw-bold">Fire Safety Certificate</h6>
+<p class="small text-muted">Bureau of Fire Protection</p>
+</div>
+</div>
+</div>
+
+<!-- DOE -->
+<div class="col-md-3 col-sm-6">
+<div class="card permit-card shadow-sm">
+<img src="assets/permits/doe.jpg" class="permit-img" alt="DOE Permit">
+<div class="card-body text-center">
+<h6 class="fw-bold">DOE Permit</h6>
+<p class="small text-muted">Department of Energy License</p>
+</div>
+</div>
+</div>
+
+
+
+<!-- Environmental Permit -->
+<div class="col-md-3 col-sm-6">
+<div class="card permit-card shadow-sm">
+<img src="assets/permits/denr.jpg" class="permit-img" alt="Environmental Permit">
+<div class="card-body text-center">
+<h6 class="fw-bold">Environmental Compliance</h6>
+<p class="small text-muted">DENR / EMB Approval</p>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Mission & Vision -->
+<section class="py-5 text-center">
+<div class="container">
+<div class="row">
+<div class="col-md-6 mb-4">
+<i class="bi bi-bullseye fs-1-custom"></i>
+<h3 class="fw-bold mt-3">Our Mission</h3>
+<p class="text-muted">To provide reliable fuel and LPG distribution services while maintaining the highest standards of safety, efficiency, and customer satisfaction.</p>
+</div>
+<div class="col-md-6 mb-4">
+<i class="bi bi-eye fs-1-custom"></i>
+<h3 class="fw-bold mt-3">Our Vision</h3>
+<p class="text-muted">To become one of the leading energy distribution companies in the Philippines, recognized for innovation, integrity, and service excellence.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- President Message -->
+<section id="president-message" class="py-5">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-4 text-center mb-4 mb-lg-0">
+<img src="assets/president.jpg" class="img-fluid rounded-circle shadow" alt="President & CEO">
+</div>
+<div class="col-lg-8">
+<h2>A Message from Our President</h2>
+<p class="lead">At Jazul Empire Distributors, Inc., our mission has always been to empower businesses and communities through reliable and safe fuel and LPG distribution. Our dedicated team, extensive network, and commitment to excellence ensure that we deliver quality service every day. Together, we grow, innovate, and build a stronger future.</p>
+<p class="fw-bold mb-0">– Jazul Management, President & CEO</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Board of Directors -->
+<section id="team" class="py-5 bg-light">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bolder" style="color:#800000;">Board of Directors</h2>
+<p class="lead text-muted">Leading Jazul Empire Distributors with vision and excellence</p>
+</div>
+
+<div class="row g-4 justify-content-center">
+<!-- President -->
+<div class="col-md-3 text-center director-card">
+<img src="assets/president.jpg" alt="President & CEO">
+<h5>Jazul Management</h5>
+<p class="small">President & CEO</p>
+</div>
+
+<!-- Director 1 -->
+<div class="col-md-3 text-center director-card">
+<img src="assets/director1.jpg" alt="Chairman">
+<h5>Director Name</h5>
+<p class="small">Chairman</p>
+</div>
+
+<!-- Director 2 -->
+<div class="col-md-3 text-center director-card">
+<img src="assets/director2.jpg" alt="Operations Head">
+<h5>Director Name</h5>
+<p class="small">Operations Director</p>
+</div>
+
+<!-- Director 3 -->
+<div class="col-md-3 text-center director-card">
+<img src="assets/director3.jpg" alt="Finance Head">
+<h5>Director Name</h5>
+<p class="small">Finance Director</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Core Values -->
+<section class="py-5 bg-light text-center">
+<div class="container">
+<h2 class="fw-bold mb-4">Our Core Values</h2>
+<div class="row">
+<div class="col-md-4 mb-4">
+<i class="bi bi-shield-check fs-1-core"></i>
+<h5 class="mt-3">Safety</h5>
+<p class="text-muted">Safety is our highest operational priority.</p>
+</div>
+<div class="col-md-4 mb-4">
+<i class="bi bi-handshake fs-1-core"></i>
+<h5 class="mt-3">Integrity</h5>
+<p class="text-muted">We build trust through honesty and transparency.</p>
+</div>
+<div class="col-md-4 mb-4">
+<i class="bi bi-graph-up-arrow fs-1-core"></i>
+<h5 class="mt-3">Excellence</h5>
+<p class="text-muted">Continuous improvement drives our success.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ==============================
+     FOOTER
+================================ -->
+<footer class="text-center py-4">
+<div class="container">
+<p class="fw-semibold mb-1">Jazul Empire Distributors, Inc.</p>
+<small>LPG & Fuel Distribution | Masbate Province, Philippines</small>
+<p class="mt-2 mb-0">
+© <span id="year"></span> All Rights Reserved
+</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

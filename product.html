@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Our products - Fuel and LPG distribution by Jazul Empire Distributors" />
+<title>Our Products | Jazul Empire Distributors</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="assets/back.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="assets/back.ico" />
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<!-- Custom CSS -->
+<style>
+:root {
+    --jazul-yellow: #FFC107;
+    --jazul-maroon: #800000;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--jazul-maroon);
+}
+.navbar .nav-link {
+    color: var(--jazul-yellow);
+    font-weight: 600;
+    margin-left: 15px;
+}
+.navbar .nav-link.active {
+    text-decoration: underline;
+}
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: linear-gradient(rgba(128,0,0,0.75), rgba(128,0,0,0.75)), url('assets/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--jazul-yellow);
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn-jazul {
+    background-color: var(--jazul-yellow);
+    color: var(--jazul-maroon);
+    font-weight: 700;
+    padding: 1.5rem 2.5rem;
+    font-size: 1.3rem;
+    border-radius: 0.8rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.btn-jazul:hover {
+    background-color: var(--jazul-maroon);
+    color: var(--jazul-yellow);
+    transform: scale(1.05);
+}
+
+/* Category Section */
+.category-section {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+.category-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--jazul-maroon);
+}
+.category-section p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 2.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #800000; /* Black footer */
+    color: var(--jazul-yellow);
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .btn-jazul {
+        width: 90%;
+        font-size: 1.1rem;
+        padding: 1rem 1.5rem;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
+</style>
+</head>
+<body class="d-flex flex-column">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Jazul Empire</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon" style="filter: invert(100%);"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="index.html"><i class="bi bi-house-door-fill me-1"></i> Home</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="about.html"><i class="bi bi-info-circle-fill me-1"></i> About Us</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="product.html"><i class="bi bi-box-seam me-1"></i> Products</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#service-area"><i class="bi bi-geo-alt-fill me-1"></i> Service Areas</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="#team"><i class="bi bi-people-fill me-1"></i> Team</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="faq.html"><i class="bi bi-question-circle-fill me-1"></i> FAQ</a></li>
+        <li class="nav-item"><a class="nav-link d-flex align-items-center" href="contact.html"><i class="bi bi-envelope-fill me-1"></i> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <h1>Our Products</h1>
+    <p>Reliable Fuel and LPG distribution solutions for commercial and residential needs</p>
+</section>
+
+<!-- Product Category Section -->
+<section class="category-section">
+    <div class="container">
+        <h1>Request a Quote / Order</h1>
+        <p>Select a category below to place your order or request pricing for delivery.</p>
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+            <a class="btn btn-jazul d-flex align-items-center gap-2" href="fuel.html">
+                <i class="bi bi-fuel-pump fs-4"></i> Fuel
+            </a>
+            <a class="btn btn-jazul d-flex align-items-center gap-2" href="lpg.html">
+                <i class="bi bi-droplet-half fs-4"></i> LPG
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==============================
+     FOOTER
+================================ -->
+<footer class="text-center py-4">
+<div class="container">
+<p class="fw-semibold mb-1">Jazul Empire Distributors, Inc.</p>
+<small>LPG & Fuel Distribution | Masbate Province, Philippines</small>
+<p class="mt-2 mb-0">
+© <span id="year"></span> All Rights Reserved
+</p>
+</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

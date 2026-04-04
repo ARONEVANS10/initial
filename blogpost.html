@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>News & Updates | Jazul Empire Distributors</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+/* ================= BRAND COLORS ================= */
+:root{
+    --jazul-maroon:#800000;
+    --jazul-gold:#f4b400;
+}
+
+/* ================= GENERAL ================= */
+body{
+    background:#f8f9fa;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.section-title{
+    font-weight:700;
+    color:var(--jazul-maroon);
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+    background:var(--jazul-maroon);
+}
+
+.navbar-brand{
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* ================= BLOG HEADER ================= */
+.blog-header{
+    background:linear-gradient(rgba(128,0,0,.85),rgba(128,0,0,.85)),
+    url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d") center/cover;
+    color:white;
+    padding:80px 0;
+}
+
+/* ================= ARTICLE ================= */
+.article-card{
+    border:none;
+    border-radius:12px;
+}
+
+/* ================= COMMENTS ================= */
+.comment-box{
+    border-left:4px solid var(--jazul-gold);
+    padding-left:15px;
+}
+
+.reply{
+    margin-left:40px;
+    background:#f1f1f1;
+    border-radius:8px;
+    padding:10px;
+    margin-top:8px;
+}
+
+/* ================= BUTTON ================= */
+.btn-jazul{
+    background:var(--jazul-maroon);
+    color:white;
+}
+
+.btn-jazul:hover{
+    background:#5e0000;
+    color:white;
+}
+
+</style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="navbar-brand" href="index.html">JAZUL EMPIRE</a>
+</div>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header class="blog-header text-center">
+<div class="container">
+<h1 class="fw-bold">Company News & Updates</h1>
+<p class="lead">Latest announcements, fuel updates, and LPG distribution news.</p>
+</div>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<main class="flex-shrink-0">
+
+<section class="py-5">
+<div class="container">
+
+<div class="row justify-content-center">
+<div class="col-lg-9">
+
+<!-- ARTICLE -->
+<div class="card article-card shadow-sm mb-5">
+<div class="card-body p-4">
+
+<h2 class="fw-bold">Jazul Empire Expands LPG Distribution in Masbate</h2>
+
+<p class="text-muted">
+<i class="bi bi-calendar"></i> April 2026 • Company Announcement
+</p>
+
+<p>
+Jazul Empire Distributors continues to strengthen its LPG distribution
+network across Masbate Province. Our commitment is to provide safe,
+reliable, and affordable energy solutions to households, businesses,
+and fuel stations.
+</p>
+
+<p>
+With additional logistics support and improved delivery operations,
+customers can expect faster service and consistent product availability.
+</p>
+
+</div>
+</div>
+
+<!-- ================= COMMENTS ================= -->
+<div class="card shadow-sm">
+<div class="card-body">
+
+<h4 class="section-title mb-3">Discussion</h4>
+
+<input id="name" class="form-control mb-2" placeholder="Your Name">
+
+<textarea id="message" class="form-control mb-3"
+rows="3" placeholder="Write your comment..."></textarea>
+
+<button class="btn btn-jazul" onclick="addComment()">
+<i class="bi bi-chat-dots"></i> Post Comment
+</button>
+
+<hr>
+
+<div id="commentList"></div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4 mt-auto">
+© <span id="year"></span> Jazul Empire Distributors, Inc.
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+/* ===== COMMENT SYSTEM (Professional Version) ===== */
+
+let comments =
+JSON.parse(localStorage.getItem("jazulBlog")) || [];
+
+function save(){
+localStorage.setItem("jazulBlog",JSON.stringify(comments));
+}
+
+function addComment(){
+
+const name=document.getElementById("name").value.trim();
+const msg=document.getElementById("message").value.trim();
+
+if(!name||!msg){
+alert("Please complete the fields.");
+return;
+}
+
+comments.push({
+id:Date.now(),
+name,
+msg,
+replies:[]
+});
+
+save();
+render();
+
+document.getElementById("name").value="";
+document.getElementById("message").value="";
+}
+
+function reply(id){
+const input=document.getElementById("reply-"+id);
+const text=input.value.trim();
+if(!text) return;
+
+comments.find(c=>c.id===id).replies.push(text);
+
+save();
+render();
+}
+
+function render(){
+
+const list=document.getElementById("commentList");
+list.innerHTML="";
+
+comments.forEach(c=>{
+
+let replies="";
+
+c.replies.forEach(r=>{
+replies+=`<div class="reply">${r}</div>`;
+});
+
+list.innerHTML+=`
+<div class="comment-box mb-4">
+<strong>${c.name}</strong>
+<p>${c.msg}</p>
+
+<input id="reply-${c.id}"
+class="form-control form-control-sm mb-2"
+placeholder="Reply...">
+
+<button class="btn btn-sm btn-outline-dark"
+onclick="reply(${c.id})">
+Reply
+</button>
+
+${replies}
+</div>
+`;
+});
+}
+
+render();
+
+</script>
+
+</body>
+</html>
