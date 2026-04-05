@@ -414,3 +414,67 @@ footer {
     .jazul-hero h1 { font-size: clamp(1.5rem, 6vw, 2.5rem); }
     .jazul-hero p { font-size: clamp(0.9rem, 2.5vw, 1.2rem); }
 }
+
+/* BIGGER TEAM IMAGE */
+.team-img {
+    width: 240px;        /* was 180px */
+    height: 240px;       /* was 180px */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 6px solid #800000; /* Jazul Red */
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+<!-- Leadership Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Leadership Team</h2>
+      <p class="text-muted">
+        Dedicated professionals driving Jazul Empire Distributors, Inc.
+      </p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+
+      <!-- President -->
+      <div class="col-lg-4 col-md-6">
+        <div class="team-card text-center">
+          <div class="team-img">
+            <img src="assets/president.jpg" alt="President">
+          </div>
+          <h5 class="mt-4 mb-1">FRANKLIN R. JAZUL</h5>
+          <p class="team-role">President / Chief Executive Officer</p>
+        </div>
+      </div>
+
+      <!-- Corporate Secretary -->
+      <div class="col-lg-4 col-md-6">
+        <div class="team-card text-center">
+          <div class="team-img">
+            <img src="assets/corpsec.jpg" alt="Corporate Secretary">
+          </div>
+          <h5 class="mt-4 mb-1">ALLAN R. JAZUL</h5>
+          <p class="team-role">Corporate Secretary</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SEE MORE BUTTON -->
+    <div class="text-center mt-5">
+      <a href="team.html" class="btn btn-jazul px-4 py-2">
+        <i class="bi bi-people-fill me-2"></i> See Full Organization
+      </a>
+    </div>
+
+  </div>
+</section>
