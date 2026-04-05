@@ -7,12 +7,20 @@
 <title>LPG Products | Jazul Empire Distributors</title>
 
 <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+<link rel="icon" type="image/x-icon" href="assets/back.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="assets/back.ico" />
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("9PHq651gJOkxmP9sL"); // your public key
+    })();
+</script>
 
 <!-- Custom CSS -->
 <style>
@@ -119,7 +127,7 @@ footer {
 </head>
 <body class="d-flex flex-column">
 
-<<!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Jazul Empire</a>
@@ -181,7 +189,7 @@ footer {
         <!-- Display contact info -->
         <div class="text-center mb-4">
             <p class="fw-bold mb-1">Contact LPG Office Team</p>
-            <p class="mb-1">📞 +63 912 345 6789 | ✉️ sales@jazulempire.com</p>
+            <p class="mb-1">📞 +63 xxxxxxx | ✉️ jazulfuel@gmail.com</p>
             <p class="contact-note">Please contact our LPG office team to know the price per product before submitting your order.</p>
         </div>
 
@@ -228,9 +236,6 @@ footer {
 </section>
 
 <!-- Footer -->
-<!-- ==============================
-     FOOTER
-================================ -->
 <footer class="text-center py-4">
 <div class="container">
 <p class="fw-semibold mb-1">Jazul Empire Distributors, Inc.</p>
@@ -240,32 +245,50 @@ footer {
 </p>
 </div>
 </footer>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Script -->
 <script>
-document.getElementById('current-year').textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
 function submitLPGOrder() {
-    const name = document.getElementById('customerName').value;
-    const email = document.getElementById('customerEmail').value;
-    const cp = document.getElementById('customerCP').value;
-    const address = document.getElementById('customerAddress').value;
+    const name = document.getElementById('customerName').value.trim();
+    const email = document.getElementById('customerEmail').value.trim();
+    const cp = document.getElementById('customerCP').value.trim();
+    const address = document.getElementById('customerAddress').value.trim();
     const qty11 = Number(document.getElementById('qty11kg').value);
     const qty50 = Number(document.getElementById('qty50kg').value);
 
+    // Validation
     if(!name || !email || !cp || !address) {
         alert("Please fill in all customer details.");
         return;
     }
-
     if(qty11 === 0 && qty50 === 0) {
         alert("Please select at least one LPG quantity to order.");
         return;
     }
 
-    alert(`Thank you ${name}! Our distribution team will contact you shortly to confirm your LPG order.\n\nOrder Summary:\n11kg LPG: ${qty11}\n50kg LPG: ${qty50}`);
-    document.getElementById('lpgOrderForm').reset();
+    const templateParams = {
+        customer_name: name,
+        customer_email: email,
+        customer_contact: cp,
+        delivery_address: address,
+        qty_11kg: qty11,
+        qty_50kg: qty50
+    };
+
+    emailjs.send('service_1ittoky', 'template_9jkztor', templateParams)
+    .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert(`Thank you ${name}! Your LPG order has been submitted successfully. Our distribution team will contact you shortly.`);
+        document.getElementById('lpgOrderForm').reset();
+    }, function(error) {
+        console.log('FAILED...', error);
+        alert("Oops! Something went wrong. Please try again later.");
+    });
 }
 </script>
 
