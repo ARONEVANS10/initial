@@ -21,21 +21,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build with Docker
-        run: |
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll \
-          -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      # IMPORTANTE: Para hindi mawala ang custom domain mo tuwing build
-      - name: Fix CNAME for Custom Domain
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Fix CNAME
         run: echo "jazulempire.online" > ./_site/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./_site
 
   deploy:
     environment:
