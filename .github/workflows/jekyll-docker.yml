@@ -3,32 +3,37 @@ name: Build & Deploy Jekyll
 on:
   push:
     branches:
-      - main  # or your deployment branch
+      - main  # Palitan kung anong branch mo gusto i-deploy
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      # 1. Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.2  # compatible with latest Jekyll
-        bundler-cache: true
+      # 2. Setup Ruby
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2
+          bundler-cache: true
 
-    - name: Install dependencies
-      run: |
-        gem install jekyll bundler
-        bundle install
+      # 3. Install Jekyll & dependencies
+      - name: Install dependencies
+        run: |
+          gem install jekyll bundler
+          bundle install
 
-    - name: Build Jekyll site
-      run: bundle exec jekyll build
+      # 4. Build Jekyll site
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v6
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_site
+      # 5. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
