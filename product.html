@@ -168,23 +168,72 @@ footer {
     </div>
 </section>
 
-<!-- ==============================
-     FOOTER
-================================ -->
-<footer class="text-center py-4">
-<div class="container">
-<p class="fw-semibold mb-1">Jazul Empire Distributors, Inc.</p>
-<small>LPG & Fuel Distribution | Masbate Province, Philippines</small>
-<p class="mt-2 mb-0">
-© <span id="year"></span> All Rights Reserved
-</p>
-</div>
+<!-- Footer -->
+<!-- ================= FOOTER ================= -->
+<footer style="background:var(--jazul-maroon); color:var(--jazul-yellow); padding:40px 20px; margin-top:60px;">
+  <div class="container text-center">
+
+    <!-- Company Info -->
+    <p class="mb-1 fw-bold fs-5">Jazul Empire Distributors, Inc.</p>
+    <small class="d-block mb-3">LPG & Fuel Distribution | Masbate Province, Philippines</small>
+
+    <!-- Social Icons -->
+    <div class="mb-3 d-flex justify-content-center flex-wrap gap-3">
+
+      <!-- Facebook Fuel -->
+      <div>
+        <a href="https://www.facebook.com/jazul.fuel" target="_blank" class="text-warning fs-5">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <div style="font-size:0.75rem;">Fuel</div>
+      </div>
+
+      <!-- Facebook LPG -->
+      <div>
+        <a href="https://www.facebook.com/JazulLPG.Official" target="_blank" class="text-warning fs-5">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <div style="font-size:0.75rem;">LPG</div>
+      </div>
+
+      <!-- Twitter -->
+      <div>
+        <a href="https://twitter.com/YourOfficialPage" target="_blank" class="text-warning fs-5">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <div style="font-size:0.75rem;">Twitter</div>
+      </div>
+
+      <!-- Instagram -->
+      <div>
+        <a href="https://www.instagram.com/YourOfficialPage" target="_blank" class="text-warning fs-5">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <div style="font-size:0.75rem;">Instagram</div>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <a href="mailto:jazulfuel@gmail.com" target="_blank" class="text-warning fs-5">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+        <div style="font-size:0.75rem;">G-mail</div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <p class="mb-0">© <span id="year"></span> All Rights Reserved</p>
+  </div>
 </footer>
 
-<!-- Bootstrap JS -->
+<!-- Bootstrap & EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<!-- Dynamic Year Script -->
 <script>
-document.getElementById('current-year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
