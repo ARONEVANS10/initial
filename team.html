@@ -3,155 +3,459 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jazul Empire - Our Team</title>
+
+<title>Our Team | Jazul Empire Distributors</title>
+
+<link rel="icon" href="assets/back.ico">
+
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" href="team.css">
+
+<style>
+
+:root{
+ --jazul-maroon:#800000;
+ --jazul-yellow:#FFC107;
+}
+
+body{
+ font-family:Segoe UI, Arial, sans-serif;
+ background:#f7f7f7;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+ background:var(--jazul-maroon);
+}
+
+.navbar-brand{
+ color:var(--jazul-yellow)!important;
+ font-weight:800;
+}
+
+.nav-link{
+ color:var(--jazul-yellow)!important;
+ font-weight:600;
+}
+
+.nav-link:hover{
+ color:#fff!important;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+ background:linear-gradient(rgba(128,0,0,.85),rgba(128,0,0,.85)),
+ url('assets/back.png') center/cover;
+ color:var(--jazul-yellow);
+ text-align:center;
+ padding:120px 20px 80px;
+}
+
+.hero h1{
+ font-weight:900;
+}
+
+/* ================= ORG TREE ================= */
+
+.tree{
+ text-align:center;
+}
+
+.level{
+ margin:40px 0;
+}
+
+.member{
+ background:white;
+ border-radius:12px;
+ padding:20px;
+ width:220px;
+ margin:auto;
+ box-shadow:0 6px 18px rgba(0,0,0,.1);
+ border-top:5px solid var(--jazul-maroon);
+ transition:.3s;
+}
+
+.member:hover{
+ transform:translateY(-5px);
+}
+
+.member img{
+ width:100px;
+ height:100px;
+ border-radius:50%;
+ object-fit:cover;
+ border:4px solid var(--jazul-yellow);
+ margin-bottom:10px;
+}
+
+.role{
+ font-weight:700;
+ color:var(--jazul-maroon);
+}
+
+.branch-card{
+ background:var(--jazul-yellow);
+ padding:15px;
+ border-radius:10px;
+ margin:10px;
+ font-weight:600;
+ color:var(--jazul-maroon);
+}
+
+/* footer */
+footer{
+ background:var(--jazul-maroon);
+ color:var(--jazul-yellow);
+ text-align:center;
+ padding:20px;
+ margin-top:60px;
+}
+
+</style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Jazul Empire</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-      </ul>
-    </div>
-  </div>
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+
+<a class="navbar-brand" href="index.html">Jazul Empire</a>
+
+<button class="navbar-toggler bg-light"
+data-bs-toggle="collapse"
+data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="bi bi-house-door-fill"></i> Home
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">
+<i class="bi bi-info-circle-fill"></i> About
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="product.html">
+<i class="bi bi-box-seam"></i> Products
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="team.html">
+<i class="bi bi-people-fill"></i> Team
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">
+<i class="bi bi-envelope-fill"></i> Contact
+</a>
+</li>
+
+</ul>
+</div>
+</div>
 </nav>
 
-<!-- Hero Section -->
-<section class="jazul-hero">
-  <div class="container text-center">
-    <h1>Our Dedicated Team</h1>
-    <p>Professional, skilled, and committed employees across all branches and divisions ensure safe and reliable service.</p>
-  </div>
+<!-- HERO -->
+<section class="hero">
+<h1>Organizational Structure</h1>
+<p>Jazul Empire Distributors, Inc.</p>
 </section>
 
-<!-- Divisions -->
-<section class="py-5">
-  <div class="container">
+<div class="container tree">
 
-    <!-- Fuel Station Division -->
-    <h2 class="section-title">Fuel Station Division</h2>
-    <p class="text-center text-muted mb-4">Cashiers & Pump Boys across all branches.</p>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p1.jpg" alt="Cashier">
-          <h5 class="mt-3">Maria Cruz</h5>
-          <p>Cashier - Malinta</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p2.jpg" alt="Pump Boy">
-          <h5 class="mt-3">Pedro Santos</h5>
-          <p>Pump Boy - Malinta</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p3.jpg" alt="Cashier">
-          <h5 class="mt-3">Juan Dela Cruz</h5>
-          <p>Cashier - Cagba</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p4.jpg" alt="Pump Boy">
-          <h5 class="mt-3">Anna Reyes</h5>
-          <p>Pump Boy - Cagba</p>
-        </div>
-      </div>
-    </div>
+<!-- ================= EXECUTIVES ================= -->
 
-    <!-- LPG Division -->
-    <h2 class="section-title mt-5">LPG Division</h2>
-    <p class="text-center text-muted mb-4">Refillers, Drivers, and Staff for safe LPG operations.</p>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p5.jpg" alt="Refiller">
-          <h5 class="mt-3">Ramon Lopez</h5>
-          <p>Refiller - Malinta</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p6.jpg" alt="Driver">
-          <h5 class="mt-3">Lucia Ramos</h5>
-          <p>Driver - Malinta</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p7.jpg" alt="Maintenance">
-          <h5 class="mt-3">Miguel Navarro</h5>
-          <p>Maintenance Staff</p>
-        </div>
-      </div>
-    </div>
+<div class="level row justify-content-center g-4">
 
-    <!-- Branches Section -->
-    <h2 class="section-title mt-5">Branches</h2>
-    <p class="text-center text-muted mb-4">Our locations across Masbate Province & Antipolo City.</p>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p8.jpg" alt="Malubi Branch Staff">
-          <h5 class="mt-3">Leo Dela Rosa</h5>
-          <p>Cashier - Malubi</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p9.jpg" alt="Malubi Pump Boy">
-          <h5 class="mt-3">Jovita Perez</h5>
-          <p>Pump Boy - Malubi</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p10.jpg" alt="Mandaon Branch Staff">
-          <h5 class="mt-3">Rafael Gomez</h5>
-          <p>Cashier - Mandaon</p>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="team-card">
-          <img src="assets/p11.jpg" alt="Mandaon Pump Boy">
-          <h5 class="mt-3">Sofia Reyes</h5>
-          <p>Pump Boy - Mandaon</p>
-        </div>
-      </div>
-    </div>
+<div class="col-md-3">
+<div class="member">
+<img src="assets/president.jpg">
+<div class="role">President</div>
+<p>FRANKLIN R. JAZUL</p>
+</div>
+</div>
 
-  </div>
-</section>
+</div>
 
-<!-- Footer -->
+<div class="level row justify-content-center g-4">
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/corpsec.jpg">
+<div class="role">Corporate Secretary</div>
+<p>ALLAN R. JAZUL</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p3.jpg">
+<div class="role">CORPORATE TRESURER</div>
+<p>GENALYN A. JAZUL</p>
+</div>
+</div>
+
+<div class="level row justify-content-center g-4"></div>
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p3.jpg">
+<div class="role">MEMBER</div>
+<p>ALBERTO D. JAZUL III</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p3.jpg">
+<div class="role">MEMBER</div>
+<p>ALBERTO TIMOTHEO R. JAZUL </p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p3.jpg">
+<div class="role">MEMBER</div>
+<p>GERALD R. JAZUL</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p3.jpg">
+<div class="role">MEMBER</div>
+<p>RAFAEL R. JAZUL</p>
+</div>
+</div>
+
+
+</div>
+
+<hr>
+
+<!-- ================= LPG OFFICE ================= -->
+
+<h3 class="text-center text-danger fw-bold">JAZUL LPG OFFICE</h3>
+
+<div class="level row justify-content-center">
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p4.jpg">
+<div class="role">LPG Office Manager</div>
+</div>
+</div>
+
+</div>
+
+<div class="level row justify-content-center">
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">Checker</div>
+<p>Editable</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p3.jpg">
+<div class="role">Treasurer</div>
+<p>Editable</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p3.jpg">
+<div class="role">CASHIER</div>
+<p>Editable</p>
+</div>
+</div>
+
+</div>
+
+<div class="level row text-center">
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">RIFFILER</div>
+<p>Editable</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">RIFFILER</div>
+<p>Editable</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">RIFFILER</div>
+<p>Editable</p>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">RIFFILER</div>
+<p>Editable</p>
+</div>
+</div>
+
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">RIFFILER</div>
+<p>Editable</p>
+</div>
+</div>
+
+
+<h3 class="text-center text-danger fw-bold">JAZUL LPG WORKSHOP</h3>
+
+<div class="level row justify-content-center">
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">WORKSHOP</div>
+<p>Editable</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">WORKSHOP</div>
+<p>Editable</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p5.jpg">
+<div class="role">WORKSHOP</div>
+<p>Editable</p>
+</div>
+</div>
+
+<hr>
+
+<!-- ================= FUEL OFFICE ================= -->
+
+<h3 class="text-center text-danger fw-bold">JAZUL FUEL OFFICE</h3>
+
+<div class="level row justify-content-center">
+
+<div class="col-md-3">
+<div class="member">
+<img src="assets/p6.jpg">
+<div class="role">Fuel Office Manager</div>
+</div>
+</div>
+
+</div>
+
+<div class="level row justify-content-center">
+
+<div class="col-md-3"><div class="member"><div class="role">Finance</div></div></div>
+<div class="col-md-3"><div class="member"><div class="role">Office Staff</div></div></div>
+<div class="col-md-3"><div class="member"><div class="role">Technical Maintenance</div></div></div>
+
+</div>
+
+<hr>
+
+<!-- ================= BRANCHES ================= -->
+
+<h3 class="text-center text-danger fw-bold">Fuel Station Branches</h3>
+
+<div class="row text-center">
+
+<div class="col-md-3">
+<div class="branch-card">
+Malinta Branch<br>
+Cashier → 3-5 Pump Boys
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="branch-card">
+Cagba Branch<br>
+Cashier → Pump Boys
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="branch-card">
+Asid Branch<br>
+Cashier → Pump Boys
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="branch-card">
+Baleno Branch<br>
+Cashier → Pump Boys
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="branch-card">
+Malubi Branch<br>
+Cashier → Pump Boys
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="branch-card">
+Mandaon Branch<br>
+Cashier → Pump Boys
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="branch-card">
+Antipolo City<br>
+Coming Soon
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
 <footer>
-  <div class="container text-center">
-    <p class="fw-semibold mb-1">Jazul Empire Distributors, Inc.</p>
-    <small>LPG & Fuel Distribution | Masbate Province, Philippines</small>
-    <p class="mt-2 mb-0">© <span id="year"></span> All Rights Reserved</p>
-  </div>
+© 2026 Jazul Empire Distributors, Inc.
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
