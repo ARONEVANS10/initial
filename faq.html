@@ -1,174 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Corporate FAQ Page" />
-    <meta name="author" content="Jazul Empire Distributors, Inc." />
-    <title>Jazul Empire - FAQ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<title>FAQ | Jazul Empire Distributors, Inc.</title>
 
-    <!-- Bootstrap CSS & Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<meta name="description" content="Jazul Empire Distributors - LPG & Fuel Distribution in Masbate">
+<link rel="icon" href="assets/back.ico">
 
-    <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-        /* Custom Styling */
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; }
-        .accordion-button { background-color: #ffffff; color: #343a40; font-weight: 500; }
-        .accordion-button:focus { box-shadow: none; }
-        .accordion-body { background-color: #f1f3f5; }
-        .contact-card { border-radius: 12px; background-color: #ffffff; box-shadow: 0 0 15px rgba(0,0,0,0.05); padding: 30px; }
-        footer { background-color: #212529; color: #adb5bd; }
-        footer a { color        footer a { color: #adb5bd; text-decoration: none; }
-        footer a:hover { color: #fff; text-decoration: underline; }
-        .section-title { font-size: 2.25rem; color: #343a40; margin-bottom: 1rem; }
-        .fw-bolder { font-weight: 600 !important; }
-        .text-muted { color: #6c757d !important; }
-    </style>
+<!-- Bootstrap & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+:root {
+    --jazul-maroon:#800000;
+    --jazul-yellow:#FFC107;
+}
+
+/* GLOBAL */
+body{
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+    margin:0;
+    padding-top:80px;
+}
+
+/* NAVBAR */
+.navbar{
+    background:var(--jazul-maroon);
+}
+.navbar-brand{
+    color:var(--jazul-yellow)!important;
+    font-weight:800;
+}
+.nav-link{
+    color:var(--jazul-yellow)!important;
+    font-weight:600;
+}
+.nav-link:hover{
+    color:#fff!important;
+}
+
+/* PAGE HEADER */
+.page-header{
+    background:linear-gradient(rgba(128,0,0,.85),rgba(128,0,0,.85)),
+    url('assets/back.png') center/cover;
+    color:var(--jazul-yellow);
+    padding:80px 20px;
+    text-align:center;
+}
+
+/* CONTENT */
+.section-title{
+    font-weight:900;
+    color:var(--jazul-maroon);
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* FOOTER */
+footer{
+    background:var(--jazul-maroon);
+    color:var(--jazul-yellow);
+}
+</style>
 </head>
-<body class="d-flex flex-column h-100">
 
-    <main class="flex-shrink-0">
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-            <div class="container px-5">
-                <a class="navbar-brand fw-bold" href="index.html">
-                    <img src="assets/logo.png" height="40" alt="Jazul Empire Logo" class="me-2"> Jazul Empire
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body>
 
-        <!-- Page Content -->
-        <section class="py-5">
-            <div class="container px-5 my-5">
-                <div class="text-center mb-5">
-                    <h1 class="fw-bolder section-title">Frequently Asked Questions</h1>
-                    <p class="lead text-muted">Everything you need to know about our services and operations.</p>
-                </div>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+<div class="container">
 
-                <div class="row gx-5">
-                    <!-- FAQ Accordion -->
-                    <div class="col-xl-8">
-                        <h2 class="fw-bolder mb-3">Account & Billing</h2>
-                        <div class="accordion mb-5" id="accordionBilling">
-                            <div class="accordion-item">
-                                <h3 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        How do I create an account?
-                                    </button>
-                                </h3>
-                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBilling">
-                                    <div class="accordion-body">
-                                        To create an account, click the "Sign Up" button on the top right corner of the homepage and fill in the required information. Once submitted, you will receive a confirmation email.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h3 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        How can I update my billing information?
-                                    </button>
-                                </h3>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionBilling">
-                                    <div class="accordion-body">
-                                        You can update your billing information in your account dashboard under "Payment Methods". Any changes will be effective immediately.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h3 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        What payment methods are accepted?
-                                    </button>
-                                </h3>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionBilling">
-                                    <div class="accordion-body">
-                                        We accept major credit/debit cards, online bank transfers, and corporate invoicing for qualified clients.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<a class="navbar-brand" href="index.html">Jazul Empire</a>
 
-                        <h2 class="fw-bolder mb-3">Website & Technical Issues</h2>
-                        <div class="accordion mb-5" id="accordionTech">
-                            <div class="accordion-item">
-                                <h3 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                        Website is not loading properly
-                                    </button>
-                                </h3>
-                                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionTech">
-                                    <div class="accordion-body">
-                                        Try clearing your browser cache or using a different browser. If the problem persists, contact our support team.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h3 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        How do I reset my password?
-                                    </button>
-                                </h3>
-                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionTech">
-                                    <div class="accordion-body">
-                                        Click "Forgot Password" on the login page and follow the instructions. You will receive an email to reset your password.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<button class="navbar-toggler bg-light"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-                    <!-- Contact / Help Card -->
-                    <div class="col-xl-4">
-                        <div class="contact-card mt-xl-5 text-center">
-                            <h5 class="fw-bolder mb-3">Need More Help?</h5>
-                            <p class="text-muted mb-3">Email our support team:</p>
-                            <a href="mailto:support@jazulempire.com" class="d-block mb-3 fw-bold">support@jazulempire.com</a>
-                            <p class="text-muted mb-3">Follow us on:</p>
-                            <div class="d-flex justify-content-center gap-3">
-                                <a class="link-dark fs-5" href="#"><i class="bi-twitter"></i></a>
-                                <a class="link-dark fs-5" href="#"><i class="bi-facebook"></i></a>
-                                <a class="link-dark fs-5" href="#"><i class="bi-linkedin"></i></a>
-                                <a class="link-dark fs-5" href="#"><i class="bi-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
 
-                </div>
-            </div>
-        </section>
-    </main>
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+<i class="bi bi-house-door-fill"></i> Home
+</a>
+</li>
 
-    <!-- Footer -->
-    <footer class="py-4 mt-auto">
-        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center">
-            <div class="small text-muted">© 2026 Jazul Empire Distributors, Inc.</div>
-            <div>
-                <a class="small text-muted mx-2" href="#">Privacy</a>
-                <a class="small text-muted mx-2" href="#">Terms</a>
-                <a class="small text-muted mx-2" href="#">Contact</a>
-            </div>
-        </div>
-    </footer>
+<li class="nav-item">
+<a class="nav-link" href="about.html">
+<i class="bi bi-info-circle-fill"></i> About Us
+</a>
+</li>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<li class="nav-item">
+<a class="nav-link" href="product.html">
+<i class="bi bi-box-seam"></i> Products
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="team.html">
+<i class="bi bi-people-fill"></i> Team
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="faq.html">
+<i class="bi bi-question-circle-fill"></i> FAQ
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">
+<i class="bi bi-envelope-fill"></i> Contact
+</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav>
+
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header">
+<div class="container">
+<h1 class="fw-bold">Frequently Asked Questions</h1>
+<p>Reliable Answers About Our Fuel & LPG Services</p>
+</div>
+</section>
+
+
+<!-- ================= PAGE CONTENT ================= -->
+<section class="py-5">
+<div class="container">
+
+<h2 class="section-title">FAQ Content Here</h2>
+
+<p class="text-center text-muted">
+Replace this section with your page content.
+</p>
+
+</div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer style="padding:40px 20px; margin-top:60px;">
+<div class="container text-center">
+
+<p class="mb-1 fw-bold fs-5">
+Jazul Empire Distributors, Inc.
+</p>
+
+<small class="d-block mb-3">
+LPG & Fuel Distribution | Masbate Province, Philippines
+</small>
+
+<!-- Social Icons -->
+<div class="mb-3 d-flex justify-content-center flex-wrap gap-3">
+
+<div>
+<a href="https://www.facebook.com/jazul.fuel" target="_blank" class="text-warning fs-5">
+<i class="bi bi-facebook"></i>
+</a>
+<div style="font-size:0.75rem;">Fuel</div>
+</div>
+
+<div>
+<a href="https://www.facebook.com/JazulLPG.Official" target="_blank" class="text-warning fs-5">
+<i class="bi bi-facebook"></i>
+</a>
+<div style="font-size:0.75rem;">LPG</div>
+</div>
+
+<div>
+<a href="#" class="text-warning fs-5">
+<i class="bi bi-twitter"></i>
+</a>
+<div style="font-size:0.75rem;">Twitter</div>
+</div>
+
+<div>
+<a href="#" class="text-warning fs-5">
+<i class="bi bi-instagram"></i>
+</a>
+<div style="font-size:0.75rem;">Instagram</div>
+</div>
+
+<div>
+<a href="mailto:jazulfuel@gmail.com" class="text-warning fs-5">
+<i class="bi bi-envelope-fill"></i>
+</a>
+<div style="font-size:0.75rem;">G-mail</div>
+</div>
+
+</div>
+
+<p class="mb-0">
+© <span id="year"></span> All Rights Reserved
+</p>
+
+</div>
+</footer>
+
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById('year').textContent =
+new Date().getFullYear();
+</script>
+
 </body>
 </html>
