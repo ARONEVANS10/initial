@@ -15,21 +15,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repo
+      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2: Configure GitHub Pages
-      - name: Setup Pages
+      # 2. Configure GitHub Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      # Step 3: Upload all site files from root
+      # 3. Upload all site files from root
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .   # root of repo
+          path: .   # root folder contains all HTML, CSS, JS, assets
 
-      # Step 4: Deploy to GitHub Pages
+      # 4. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
