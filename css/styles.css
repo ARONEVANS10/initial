@@ -478,3 +478,20 @@ footer {
 
   </div>
 </section>
+
+login-btn{
+    background:#FFC107;
+    color:#800000 !important;
+    border-radius:6px;
+    padding:6px 14px !important;
+    margin-left:15px;
+    font-weight:700;
+}
+
+.login-btn:hover{
+    background:#fff;
+    color:#800000 !important;
+}
+
+
+
