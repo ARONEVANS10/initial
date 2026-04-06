@@ -3,7 +3,7 @@ name: Auto Deploy Static Website
 on:
   push:
     branches:
-      - main  # Deploy on push to main branch
+      - main  # deploy on pushes to main branch
 
 permissions:
   contents: read
@@ -15,19 +15,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout code
+      # Step 1: Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Step 2: Configure Pages
-      - name: Setup GitHub Pages
+      # Step 2: Configure GitHub Pages
+      - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # Step 3: Upload files from repo root
+      # Step 3: Upload all site files from root
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: .   # root of repo
 
       # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
