@@ -3,7 +3,7 @@ name: Auto Deploy Static Website
 on:
   push:
     branches:
-      - main  # deploy on pushes to main branch
+      - main
 
 permissions:
   contents: read
@@ -13,9 +13,11 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages   # <-- THIS FIXES THE ERROR
 
     steps:
-      # 1. Checkout the repository
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -23,11 +25,11 @@ jobs:
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      # 3. Upload all site files from root
+      # 3. Upload site files from root
       - name: Upload site files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .   # root folder contains all HTML, CSS, JS, assets
+          path: .   # root of repo
 
       # 4. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
