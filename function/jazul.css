@@ -1,0 +1,105 @@
+:root{
+  --jazul-red:#800000;
+  --jazul-black:#111;
+  --jazul-white:#ffffff;
+}
+
+/* NAVBAR */
+.jazul-nav{
+  background: var(--jazul-red);
+}
+
+/* SECTION */
+.login-section{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("assets/back.ico");
+  background-size:cover;
+  color:white;
+}
+
+.title{
+  font-weight:700;
+  font-size:40px;
+}
+
+.subtitle{
+  opacity:.8;
+}
+
+/* CARDS */
+.choice-card{
+  background:white;
+  color:black;
+  padding:40px;
+  border-radius:15px;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.choice-card:hover{
+  transform:translateY(-8px);
+  background:var(--jazul-red);
+  color:white;
+}
+
+.icon{
+  font-size:50px;
+  margin-bottom:15px;
+}
+
+/* MODAL */
+.login-modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.7);
+  top:0;
+  left:0;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-box{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  width:320px;
+  text-align:center;
+}
+
+.login-box input,
+.login-box select{
+  width:100%;
+  margin:10px 0;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.login-box button{
+  width:100%;
+  background:var(--jazul-red);
+  color:white;
+  border:none;
+  padding:10px;
+  border-radius:6px;
+}
+
+.close{
+  display:block;
+  margin-top:10px;
+  cursor:pointer;
+  color:gray;
+}
+
+/* FOOTER */
+.footer{
+  background:#111;
+  color:white;
+  padding:15px;
+}

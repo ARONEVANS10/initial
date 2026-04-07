@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jazul Empire Roles</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* =======================
+   Basic Reset & Fonts
+======================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =======================
+   Navbar
+======================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #800000; /* Jazul Maroon */
+    padding: 15px 30px;
+    color: #FFC107; /* Jazul Yellow */
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navbar-menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+.navbar-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   Roles Section
+======================= */
+.roles-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.roles-section h1 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 40px;
+}
+
+.role-box {
+    background-color: #FFC107;
+    color: #800000;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px 0;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.role-box:hover {
+    transform: scale(1.02);
+}
+
+.functions-container {
+    display: none; /* hidden initially */
+    margin: 10px 0 30px 0;
+    padding-left: 20px;
+}
+.function-box {
+    background-color: #fff3cd;
+    padding: 12px 15px;
+    border-left: 4px solid #800000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.connector {
+    width: 2px;
+    height: 30px;
+    background-color: #800000;
+    margin: 0 auto;
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+    background-color: #800000;
+    color: #FFC107;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-social a {
+    color: #FFC107;
+    margin: 0 10px;
+}
+.footer-social a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav class="navbar">
+    <div class="navbar-brand">Jazul Empire Distributors</div>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<main>
+  <section class="roles-section">
+    <h1>Roles & Functions</h1>
+
+    <!-- Employer -->
+    <div class="role-box" id="employer">Employer (Admin / Manager)</div>
+    <div class="connector"></div>
+    <div class="functions-container" id="employer-functions">
+      <div class="function-box">
+        <strong>Dashboard & Analytics</strong><br>
+        - View team performance<br>
+        - Track orders & stock
+      </div>
+      <div class="function-box">
+        <strong>Employee Management</strong><br>
+        - Add/Edit profiles<br>
+        - Assign tasks<br>
+        - Monitor performance
+      </div>
+      <div class="function-box">
+        <strong>System Settings</strong><br>
+        - Website content<br>
+        - Prices & Divisions
+      </div>
+    </div>
+
+    <!-- Employee -->
+    <div class="role-box" id="employee">Employee (Refiller / Driver / Maintenance / Office Staff)</div>
+    <div class="connector"></div>
+    <div class="functions-container" id="employee-functions">
+      <div class="function-box">
+        <strong>Order Management</strong><br>
+        - Update delivery status<br>
+        - Confirm completion
+      </div>
+      <div class="function-box">
+        <strong>Inventory & Stock</strong><br>
+        - View stock<br>
+        - Record usage
+      </div>
+      <div class="function-box">
+        <strong>Reporting & Communication</strong><br>
+        - Submit delivery reports<br>
+        - Flag issues<br>
+        - Contact team
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 Jazul Empire Distributors, Inc. All Rights Reserved.</p>
+  <div class="footer-social">
+    <a href="#">Fuel FB</a> | <a href="#">LPG FB</a>
+  </div>
+</footer>
+
+<!-- JS -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const roles = document.querySelectorAll(".role-box");
+    roles.forEach(role => {
+        role.addEventListener("click", () => {
+            const targetId = role.id + "-functions";
+            const target = document.getElementById(targetId);
+            if (target.style.display === "block") {
+                target.style.display = "none";
+            } else {
+                target.style.display = "block";
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
