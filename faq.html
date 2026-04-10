@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ | Jazul Empire Distributors, Inc.</title>
+<meta name="description" content="Jazul Empire Distributors - LPG & Fuel Distribution in Masbate">
+<link rel="icon" href="assets/back.ico">
+
+<!-- Bootstrap & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+:root {
+    --jazul-maroon:#800000;
+    --jazul-yellow:#FFC107;
+}
+
+/* GLOBAL */
+body{
+    font-family:"Segoe UI",Roboto,Arial,sans-serif;
+    margin:0;
+    padding-top:80px;
+    background:#f7f7f7;
+}
+
+/* NAVBAR */
+.navbar{
+    background:var(--jazul-maroon);
+}
+.navbar-brand{
+    color:var(--jazul-yellow)!important;
+    font-weight:800;
+}
+.nav-link{
+    color:var(--jazul-yellow)!important;
+    font-weight:600;
+}
+.nav-link:hover{
+    color:#fff!important;
+}
+
+/* PAGE HEADER */
+.page-header{
+    background:linear-gradient(rgba(128,0,0,.85),rgba(128,0,0,.85)),
+    url('assets/back.png') center/cover no-repeat;
+    color:var(--jazul-yellow);
+    padding:80px 20px;
+    text-align:center;
+    border-bottom:6px solid var(--jazul-yellow); /* thick yellow line */
+}
+
+/* FAQ SECTION */
+.faq-item {
+    background:white;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.faq-header {
+    cursor:pointer;
+    padding:15px 20px;
+    font-weight:700;
+    color:var(--jazul-maroon);
+}
+.faq-body {
+    padding:0 20px 15px 20px;
+}
+
+/* SECTION TITLE */
+.section-title{
+    font-weight:900;
+    color:var(--jazul-maroon);
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* FOOTER */
+footer{
+    background:var(--jazul-maroon);
+    color:var(--jazul-yellow);
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+<div class="container">
+<a class="navbar-brand" href="index.html">Jazul Empire</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon" style="filter:invert(100%)"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door-fill"></i> Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html"><i class="bi bi-info-circle-fill"></i> About</a></li>
+<li class="nav-item"><a class="nav-link" href="service.html"><i class="bi bi-gear-fill"></i> Services</a></li>
+<li class="nav-item"><a class="nav-link" href="product.html"><i class="bi bi-box-seam"></i> Products</a></li>
+<li class="nav-item"><a class="nav-link" href="team.html"><i class="bi bi-people-fill"></i> Team</a></li>
+<li class="nav-item"><a class="nav-link active" href="faq.html"><i class="bi bi-question-circle-fill"></i> FAQ</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- ================= PAGE HEADER ================= -->
+<section class="page-header">
+<div class="container">
+<h1 class="fw-bold">Frequently Asked Questions</h1>
+<p>Reliable Answers About Our Fuel & LPG Services</p>
+</div>
+</section>
+
+<!-- ================= FAQ CONTENT ================= -->
+<section class="py-5">
+<div class="container">
+<h2 class="section-title">Common Questions</h2>
+
+<div class="accordion" id="faqAccordion">
+
+  <!-- FAQ 1 -->
+  <div class="faq-item">
+    <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+      What areas do you deliver fuel and LPG to?
+    </div>
+    <div id="faq1" class="collapse show faq-body" data-bs-parent="#faqAccordion">
+      We deliver across Masbate Province, including residential, commercial, and industrial clients. Contact us for specific locations.
+    </div>
+  </div>
+
+  <!-- FAQ 2 -->
+  <div class="faq-item">
+    <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+      How can I place an order for fuel or LPG?
+    </div>
+    <div id="faq2" class="collapse faq-body" data-bs-parent="#faqAccordion">
+      You can place an order by visiting our <a href="product.html">Products page</a> and selecting the Fuel or LPG category, then submitting your request.
+    </div>
+  </div>
+
+  <!-- FAQ 3 -->
+  <div class="faq-item">
+    <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+      What payment methods are accepted?
+    </div>
+    <div id="faq3" class="collapse faq-body" data-bs-parent="#faqAccordion">
+      We accept cash, bank transfer, and other payment methods upon prior arrangement with our team.
+    </div>
+  </div>
+
+  <!-- FAQ 4 -->
+  <div class="faq-item">
+    <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+      Do you offer bulk orders for commercial clients?
+    </div>
+    <div id="faq4" class="collapse faq-body" data-bs-parent="#faqAccordion">
+      Yes! Bulk orders for commercial clients are available. Please contact our office for a personalized quote.
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ Section Under Contact Form -->
+<section class="py-4">
+  <div class="container px-5">
+    <h4 class="section-title text-center mb-4" style="color:#800000;">Frequently Asked Questions</h4>
+    
+    <div class="accordion" id="contactFaq">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+            Can you deliver outside Masbate?
+          </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#contactFaq">
+          <div class="accordion-body">
+            ❌ At the moment, we can only deliver within the Masbate area. For other locations, please contact us for arrangements.
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+            How long will delivery take?
+          </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#contactFaq">
+          <div class="accordion-body">
+            Delivery within Masbate usually takes 1–2 business days depending on location and stock availability.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer style="padding:40px 20px; margin-top:60px;">
+<div class="container text-center">
+
+<p class="mb-1 fw-bold fs-5">
+Jazul Empire Distributors, Inc.
+</p>
+
+<small class="d-block mb-3">
+LPG & Fuel Distribution | Masbate Province, Philippines
+</small>
+
+<!-- Social Icons -->
+<div class="mb-3 d-flex justify-content-center flex-wrap gap-3">
+
+<div>
+<a href="https://www.facebook.com/jazul.fuel" target="_blank" class="text-warning fs-5">
+<i class="bi bi-facebook"></i>
+</a>
+<div style="font-size:0.75rem;">Fuel</div>
+</div>
+
+<div>
+<a href="https://www.facebook.com/JazulLPG.Official" target="_blank" class="text-warning fs-5">
+<i class="bi bi-facebook"></i>
+</a>
+<div style="font-size:0.75rem;">LPG</div>
+</div>
+
+<div>
+<a href="#" class="text-warning fs-5">
+<i class="bi bi-twitter-x"></i>
+</a>
+<div style="font-size:0.75rem;">Twitter</div>
+</div>
+
+<div>
+<a href="#" class="text-warning fs-5">
+<i class="bi bi-instagram"></i>
+</a>
+<div style="font-size:0.75rem;">Instagram</div>
+</div>
+
+<div>
+<a href="mailto:jazulfuel@gmail.com" class="text-warning fs-5">
+<i class="bi bi-envelope-fill"></i>
+</a>
+<div style="font-size:0.75rem;">G-mail</div>
+</div>
+
+</div>
+
+<p class="mb-0">
+© <span id="year"></span> All Rights Reserved
+</p>
+
+</div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
