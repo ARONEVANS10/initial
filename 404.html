@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 - Page Not Found | Jazul Empire</title>
-<link rel="icon" href="assets/back.ico">
-<!-- Bootstrap CSS -->
+
+<title>404 - Page Not Found</title>
+
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
@@ -15,97 +18,122 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* MAIN BACKGROUND */
 .jazul-404-page {
     min-height: 100vh;
-    background: linear-gradient(135deg, #800000, #FFC703);
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    padding: 50px 15px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: linear-gradient(-45deg, #800000, #ffb703, #111, #800000);
+    background-size: 400% 400%;
+    animation: bgMove 10s ease infinite;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
 }
 
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* CARD */
+.error-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 2;
+}
+
+/* LOGO */
 .jazul-logo {
-    width: 100px;
+    width: 160px;
+    animation: breathe 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255,183,3,0.6));
 }
 
+@keyframes breathe {
+    0%,100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+/* 404 TEXT */
 .error-number {
-    font-size: 8rem;
+    font-size: clamp(6rem, 12vw, 12rem);
     font-weight: 900;
-    animation: float 2s ease-in-out infinite;
+    text-shadow: 0 0 20px #ffb703, 0 0 40px #ffb703;
+    animation: float 2.5s ease-in-out infinite;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
 }
 
-.floating-icons {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    pointer-events: none;
+/* BUTTON */
+.home-btn {
+    margin-top: 10px;
+    padding: 12px 22px;
+    background: #ffb703;
+    color: #000;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
+.home-btn:hover {
+    transform: scale(1.05);
+    background: #fff;
+}
+
+/* LINKS */
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    color: #fff;
+    margin: 5px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #ffb703;
+    opacity: 1;
+}
+
+/* FLOATING ICONS */
 .floating-icons i {
     position: absolute;
     font-size: 2rem;
     opacity: 0.1;
-    animation: floatIcon linear infinite;
+    animation: floatIcon 6s infinite ease-in-out;
 }
 
-.floating-icons i:nth-child(1) { top: 20%; left: 10%; animation-duration: 10s; }
-.floating-icons i:nth-child(2) { top: 40%; left: 70%; animation-duration: 12s; }
-.floating-icons i:nth-child(3) { top: 60%; left: 30%; animation-duration: 14s; }
-.floating-icons i:nth-child(4) { top: 80%; left: 50%; animation-duration: 16s; }
+.floating-icons i:nth-child(1) { top: 15%; left: 10%; }
+.floating-icons i:nth-child(2) { top: 25%; right: 10%; }
+.floating-icons i:nth-child(3) { bottom: 20%; left: 15%; }
+.floating-icons i:nth-child(4) { bottom: 15%; right: 15%; }
 
 @keyframes floatIcon {
-    0% { transform: translateY(0) rotate(0); opacity: 0.1; }
-    50% { transform: translateY(-50px) rotate(15deg); opacity: 0.3; }
-    100% { transform: translateY(0) rotate(-15deg); opacity: 0.1; }
-}
-
-.search-form input {
-    width: 250px;
-}
-
-.search-form input:focus {
-    outline: none;
-    box-shadow: 0 0 5px #FFC703;
-    border-color: #FFC703;
-}
-
-.popular-links a:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease;
-}
-
-/* Header & Footer styling */
-header, footer {
-    background-color: #800000;
-    color: #fff;
-    padding: 15px 20px;
-}
-
-header h1, footer p {
-    margin: 0;
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 </style>
+
 </head>
+
 <body>
 
-<!-- Header -->
-<header class="text-center">
-    <h1>Jazul Empire Distributors, Inc.</h1>
-</header>
-
-<!-- 404 Page Section -->
 <section class="jazul-404-page">
 
-    <!-- Floating Background Icons -->
     <div class="floating-icons">
         <i class="bi bi-droplet-half"></i>
         <i class="bi bi-fuel-pump"></i>
@@ -113,37 +141,31 @@ header h1, footer p {
         <i class="bi bi-people-fill"></i>
     </div>
 
-    <img src="assets/back.ico" alt="Jazul Logo" class="jazul-logo mb-3">
-    <div class="error-number mb-3">404</div>
-    <h2 class="mb-2">Oops! Page Not Found</h2>
-    <p class="mb-4">THIS PAGE IS UNDER CONSTRUCT WE WILL OPEN SOON IF ALREADY BEEN UPDATE.</p>
+    <div class="error-card">
 
-    <form action="search.html" method="get" class="d-flex justify-content-center mb-3 search-form">
-        <input type="text" name="q" class="form-control me-2" placeholder="Search our site..." required>
-        <button class="btn btn-warning fw-bold" type="submit">Search</button>
-    </form>
+        <!-- LOGO -->
+        <img src="assets/back.ico" class="jazul-logo" alt="logo">
 
-    <a href="/index.html" class="btn btn-warning fw-bold mb-3">
-    <i class="bi bi-house-door-fill me-2"></i> Go Back Home
-</a>
+        <!-- 404 -->
+        <div class="error-number">404</div>
 
-<div class="popular-links">
-    <h5>Popular Links:</h5>
-    <a href="/about.html" class="btn btn-outline-light btn-sm mx-1 my-1">About Us</a>
-    <a href="/service.html" class="btn btn-outline-light btn-sm mx-1 my-1">Services</a>
-    <a href="/product.html" class="btn btn-outline-light btn-sm mx-1 my-1">Products</a>
-    <a href="/team.html" class="btn btn-outline-light btn-sm mx-1 my-1">Team</a>
-    <a href="/contact.html" class="btn btn-outline-light btn-sm mx-1 my-1">Contact</a>
-</div>
+        <h2>Oops! Page Not Found</h2>
+
+        <p>The page you are looking for does not exist or has been moved.</p>
+
+        <a href="index.html" class="home-btn">Go Back Home</a>
+
+        <div class="links">
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="product.html">Products</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- Footer -->
-<footer class="text-center">
-    <p>© 2026 Jazul Empire Distributors, Inc. All Rights Reserved.</p>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
